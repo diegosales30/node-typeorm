@@ -8,6 +8,6 @@ router.get("/", (req: Request, res: Response) => {
   return res.json({ message: "bem vindo" });
 });
 
-router.get("/usuarios", createUserController.handle);
+router.post("/usuarios", createUserController.handle);
 
 export { router };

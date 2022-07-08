@@ -2,17 +2,8 @@ import { Response, Request } from "express";
 
 class CreateUserController {
   handle(req: Request, res: Response) {
-    return res.json([
-      {
-        nome: "João",
-      },
-      {
-        nome: "Maria",
-      },
-      {
-        nome: "José",
-      },
-    ]);
+    const name = req.body.name;
+    return res.json({ message: `user ${name} criado` });
   }
 }
 
